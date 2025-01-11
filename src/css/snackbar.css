@@ -1,0 +1,74 @@
+.snackbar-form {
+    max-width: 360px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.form-label-delay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-block-end: 30px;
+    color: #2E2F42;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+}
+
+.input-delay {
+    align-self: stretch;
+    border-radius: 4px;
+}
+
+.form fieldset,
+.input-delay {
+    border: 1px solid #808080;
+    padding: 8px 16px;
+}
+
+.form fieldset:hover,
+.form-label-delay input:hover {
+    border-radius: 4px;
+    border: 1px solid #000;
+}
+
+.form fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    color: #2E2F42;
+    line-height: 1.5;
+    margin-block-end: 24px;
+}
+
+.form fieldset label {
+    margin-block-end: 0;
+}
+
+.form fieldset legend {
+    align-self: flex-start;
+    text-align: left;
+    letter-spacing: 0.64px;
+}
+
+.btn-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+
+    border-radius: 8px;
+    color: #ffffff;
+    background: #4E75FF;
+    transition: background 0.3s;
+}
+
+.btn-form:hover {
+    background: #6C8CFF;
+}

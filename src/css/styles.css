@@ -16,3 +16,9 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+@import url('./timer.css');
+@import url('./snackbar.css');
+
+/* Modules style */
+@import "flatpickr/dist/flatpickr.min.css";
+@import "izitoast/dist/css/iziToast.min.css";
