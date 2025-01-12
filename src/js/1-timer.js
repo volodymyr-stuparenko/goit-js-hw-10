@@ -23,7 +23,7 @@ flatpickr("#datetime-picker", {
   onClose(selectedDates) {
     userSelectedDate = selectedDates[0];
 
-    if (userSelectedDate <= new Date()){
+    if (userSelectedDate <= new Date()) {
       btnTimerInput.disabled = true;
       iziToast.error({
         title: 'Error',
@@ -52,10 +52,9 @@ btnTimerInput.addEventListener('click', () => {
         const timeDiff = userSelectedDate - Date.now();
 
         if (timeDiff <= 0) {
-            clearInterval(timerCalc);
-
-            btnTimerInput.disabled = false;
-            return;
+          clearInterval(timerCalc); 
+          btnTimerInput.disabled = false;
+          return;
         }
 
         const timeDiffConvert = convertMs(timeDiff);

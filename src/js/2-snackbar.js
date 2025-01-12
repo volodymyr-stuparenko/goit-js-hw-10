@@ -17,27 +17,31 @@ setTimeout(() => {
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const ms = Number(form.elements.delay.value);
+    const delay = Number(form.elements.delay.value);
 
-    const radioBtnVal = form.elements.state.value;
+    const state = form.elements.state.value;
 
-    const promise = ms => {
-        return new Promise((resolve, reject) => {
-            if (radioBtnVal === 'fulfilled') {
-                setTimeout(() => { return resolve() }, ms);
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (state === 'fulfilled') {
+                resolve(delay);
+            } else {
+                reject(delay);
             }
-            if (radioBtnVal === 'rejected') {
-                setTimeout(() => { return reject() }, ms);
-            }
+        }, delay);
+    });
+
+    promise
+        .then((delay) => {
+            iziToast.success({
+                title: 'Success',
+                message: `✅ Fulfilled promise in ${delay}ms`,
+            });
+        })
+        .catch((delay) => {
+            iziToast.error({
+                title: 'Error',
+                message: `❌ Rejected promise in ${delay}ms`,
+            });
         });
-    }
-
-    promise(ms)
-        .then((value) => iziToast.success({
-
-            message: `Fulfilled promise in ${ms}ms`,
-        }))
-        .catch((err) => iziToast.error({
-            message: `Rejected promise in ${ms}ms`,
-        }));
-});
+    });
