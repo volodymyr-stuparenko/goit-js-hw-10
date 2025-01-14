@@ -37,11 +37,7 @@ flatpickr("#datetime-picker", {
         message: 'Valid date selected!',
       });
     }
-
-    if (userSelectedDate > Date.now()) {
-      btnTimerInput.disabled = false;
-    }
-  }
+  },
 });
 
 btnTimerInput.addEventListener('click', () => {
