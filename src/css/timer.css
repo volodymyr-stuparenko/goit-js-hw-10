@@ -1,4 +1,4 @@
-.input-container {
+.input-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -7,37 +7,47 @@
     margin-bottom: 32px;
 }
 
-.timer-input {
+.timer-input::placeholder {
     max-width: 272px;
+}
+
+.input-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
     padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid #808080;
-    line-height: 1.5;
-    letter-spacing: 0.64px;
-    color: #2E2F42;
+    transition: border 250ms linear;
 }
 
-.timer-input-btn {
+.timer-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.64px;
-
+    
     gap: 10px;
     padding: 8px 16px;
     border-radius: 8px;
-
+    
     color: #989898;
     background: #CFCFCF;
-    transition: background 0.3s;
+    transition: background-color 250ms linear;
 }
 
-.timer-input-btn:hover {
-    background: #4E75FF;
-    color: #fff;
+.timer-btn:hover {
+    background-color: #6c8cff;
+    color: #ffffff;
+}
+
+.timer-btn:active {
+    background-color: #4e75ff;
 }
 
 .timer {
@@ -54,12 +64,17 @@
 }
 
 .value {
+    font-weight: 400;
     font-size: 40px;
     line-height: 1.2;
-    letter-spacing: 1.6px;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
 }
 
 .label {
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.5;
+    color: #2e2f42;
     text-transform: uppercase;
 }
